@@ -1,0 +1,15 @@
+body.dark-theme .footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #121212;
+    border-top: 1px solid #333;
+    color: #fff;
+}
+
+body.light-theme .footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #fff;
+    color: #333;
+    border-top: 1px solid #333;
+}

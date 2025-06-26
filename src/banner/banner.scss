@@ -1,0 +1,108 @@
+.banner {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    // margin-top: 70px; // Account for fixed header
+}
+
+// Dark theme banner 
+body.dark-theme .banner {
+    // background: linear-gradient(135deg, #121212 0%, #1a1a2e 50%, #16213e 100%);
+    color: #fff;
+}
+
+// Light theme banner
+body.light-theme .banner {
+    // background: linear-gradient(135deg, #ffeef7 0%, #ffe1f0 50%, #ffd4e9 100%);
+    color: #000;
+}
+
+.banner-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        animation: fadeInUp 1s ease-out;
+
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+// Dark theme content - 使用白色到浅蓝色的渐变
+body.dark-theme .banner-content h1 {
+    background: linear-gradient(45deg, #fff, #64b5f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// Light theme content - 使用深色到粉色的渐变
+body.light-theme .banner-content h1 {
+    background: linear-gradient(45deg, #333, #d63384);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.typewriter-container {
+    height: 80px; // Fixed height to prevent layout shift
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typewriter-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    min-height: 60px; // Prevent layout shift
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        font-size: 1.4rem;
+    }
+}
+
+// Cursor color 根据主题变化
+body.dark-theme .cursor {
+    color: #64b5f6;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+body.light-theme .cursor {
+    color: #d63384;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+// Animations
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #d63384;
+  text-decoration: none;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Light Theme */
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}

@@ -1,0 +1,124 @@
+.projects {
+    padding: 5rem 0;
+    
+    .projects-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        
+        .tech-item {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    }
+    
+    .project-link {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+}
+
+// Dark theme
+body.dark-theme .projects {
+    .project-card {
+        background-color: #1a1a1a;
+        border: 1px solid #333;
+        
+        h3 {
+            color: #64b5f6;
+        }
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(100, 181, 246, 0.2);
+        }
+        
+        .tech-item {
+            background-color: #333;
+            color: #64b5f6;
+        }
+        
+        .project-link {
+            background-color: #64b5f6;
+            color: #000;
+            
+            &:hover {
+                background-color: #42a5f5;
+            }
+        }
+    }
+}
+
+// Light theme
+body.light-theme .projects {
+    .project-card {
+        background-color: #fff;
+        border: 1px solid #e9ecef;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        
+        h3 {
+            color: #d63384;
+        }
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(214, 51, 132, 0.2);
+        }
+        
+        .tech-item {
+            background-color: #f8f9fa;
+            color: #d63384;
+        }
+        
+        .project-link {
+            background-color: #d63384;
+            color: #fff;
+            
+            &:hover {
+                background-color: #c2185b;
+            }
+        }
+    }
+} 
