@@ -6,7 +6,7 @@ export function Banner() {
         "I'm James Jiang.",
         "I'm a software engineer.",
         "I'm a full stack developer.",
-        "I have passion, willingness and knowledge."
+        "I have passion, willingness and skills."
     ];
 
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
