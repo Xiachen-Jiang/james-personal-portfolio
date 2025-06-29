@@ -22,6 +22,8 @@ function App() {
         <Contact />
         <Footer />
       </div>
+      {/* Portal container for popups */}
+      <div id="portal-root"></div>
     </>
   )
 }
