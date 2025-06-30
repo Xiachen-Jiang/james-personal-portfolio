@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./projects.scss";
 import { VideoModal } from '../components/VideoModal';
 
@@ -19,7 +19,7 @@ export function Projects() {
         {
             id: 2,
             title: "Trip Planner Application",
-            description: "A comprehensive trip planning application with interactive features and user-friendly interface. ",
+            description: "A comprehensive trip planning application by using ATDW data and Google Maps API to provide users with a seamless and intuitive trip planning experience.",
             technologies: ["React", "TypeScript", "Node.js", ".NET Core", "SQL Server"],
             videoSrc: "/project/trip-planner.mov"
         },
