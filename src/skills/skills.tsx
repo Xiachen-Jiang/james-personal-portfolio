@@ -3,27 +3,27 @@ import "./skills.scss";
 export function Skills() {
     const data: { heroImage: string, category: string, skills: string[] }[] = [
         {
-            heroImage: "../../public/laptop.png",
+            heroImage: "/laptop.png",
             category: "Frontend",
             skills: ["React", "TypeScript", "JavaScript", "HTML", "SCSS"]
         },
         {
-            heroImage: "../../public/server.png",
+            heroImage: "/server.png",
             category: "Backend",
             skills: [".NET Core", "Node.js", "RESTful APIs", "SQL Server"]
         },
         {
-            heroImage: "../../public/tools.png",
+            heroImage: "/tools.png",
             category: "Tools",
             skills: ["Git", "Docker", "Azure Tools", "CI/CD", "Google Analytics"]
         },
         {
-            heroImage: "../../public/cms.png",
+            heroImage: "/cms.png",
             category: "CMS",
             skills: ["WordPress", "Own built CMS"]
         },
         {
-            heroImage: "../../public/responsive-design.png",
+            heroImage: "/responsive-design.png",
             category: "Responsive Design",
             skills: ["HTML", "CSS", "JavaScript", "React", "TypeScript"]
         }

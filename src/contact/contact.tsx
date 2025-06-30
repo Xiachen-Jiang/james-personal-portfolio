@@ -4,22 +4,22 @@ export function Contact() {
 
     const data: { heroImage: string, value: string, link: string }[] = [
         {
-            heroImage: "../../public/email.png",
+            heroImage: "/email.png",
             value: "jiangxiachen01@outlook.com",
             link: "mailto:jiangxiachen01@outlook.com"
         },
         {
-            heroImage: "../../public/telephone.png",
+            heroImage: "/telephone.png",
             value: "+61 404 318 145",
             link: "tel:+61404318145"
         },
         {
-            heroImage: "../../public/linkedin.png",
+            heroImage: "/linkedin.png",
             value: "linkedin.com/in/xiachen-jiang/",
             link: "https://www.linkedin.com/in/xiachen-jiang-b84434192/"
         },
         {
-            heroImage: "../../public/github.png",
+            heroImage: "/github.png",
             value: "github.com/Xiachen-Jiang",
             link: "https://github.com/Xiachen-Jiang"
         }
