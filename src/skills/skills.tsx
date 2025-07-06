@@ -25,7 +25,7 @@ export function Skills() {
         {
             heroImage: "/responsive-design.png",
             category: "Responsive Design",
-            skills: ["HTML", "CSS", "JavaScript", "React", "TypeScript"]
+            skills: ["Desktop", "Tablet", "Mobile"]
         }
     ]
 

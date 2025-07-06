@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./topheader.scss";
 
 export function TopHeader() {
@@ -34,6 +34,23 @@ export function TopHeader() {
         }
     ]
 
+    // listen to theme change
+    useEffect(() => {
+        const checkTheme = () => {
+            const isDark = document.body.classList.contains('dark-theme');
+            setIsDarkMode(isDark);
+        };
+
+        // initial check
+        checkTheme();
+
+        // listen to body class change
+        const observer = new MutationObserver(checkTheme);
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+        return () => observer.disconnect();
+    }, []);
+
     const handleMenuClick = (id: number, link: string, event: React.MouseEvent) => {
         event.preventDefault(); // Prevent default jump
         setActiveMenu(id);
@@ -53,19 +70,15 @@ export function TopHeader() {
     }
 
     const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
-        // Apply theme to document body
-        document.body.className = isDarkMode ? 'light-theme' : 'dark-theme';
+        // use global toggleTheme function
+        if ((window as any).toggleTheme) {
+            (window as any).toggleTheme();
+        }
     }
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     }
-
-    // Apply initial theme
-    React.useEffect(() => {
-        document.body.className = isDarkMode ? 'dark-theme' : 'light-theme';
-    }, []);
 
     return (
         <nav className={`top-header ${isDarkMode ? 'dark' : 'light'}`}>
