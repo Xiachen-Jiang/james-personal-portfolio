@@ -15,10 +15,7 @@ export function AboutMe() {
             <hr />
             <div className="about-me-content">
                 <div className="about-me-content-left">
-                    <Slider {...settings}>
                         <img src='/aboutMe/james-hero.jpg' alt="About Me" />
-                        <img src='/aboutMe/james-hero.jpg' alt="About Me" />
-                    </Slider>
                 </div>
                 <div className="about-me-content-right">
                     <h3 className="font-600">Hi, there.</h3>
