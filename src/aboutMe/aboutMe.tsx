@@ -1,14 +1,8 @@
-import Slider from "react-slick";
+
 import "./aboutMe.scss";
 
 export function AboutMe() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
+
     return (
         <section className="about-me" id="about">
             <h2>About Me</h2>
