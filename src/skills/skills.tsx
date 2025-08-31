@@ -1,31 +1,62 @@
 import "./skills.scss";
 
 export function Skills() {
-    const data: { heroImage: string, category: string, skills: string[] }[] = [
+    const data: { heroImage: string, skills: string }[] = [
         {
-            heroImage: "/laptop.png",
-            category: "Frontend",
-            skills: ["React", "TypeScript", "JavaScript", "HTML", "SCSS"]
+            heroImage: "/skills/html.png",
+            skills: "HTML5"
         },
         {
-            heroImage: "/server.png",
-            category: "Backend",
-            skills: [".NET Core", "Node.js", "RESTful APIs", "SQL Server"]
+            heroImage: "/skills/css-3.png",
+            skills: "CSS3"
         },
         {
-            heroImage: "/tools.png",
-            category: "Tools",
-            skills: ["Git", "Docker", "Azure Tools", "CI/CD", "Google Analytics"]
+            heroImage: "/skills/js.png",
+            skills: "JavaScript"
         },
         {
-            heroImage: "/cms.png",
-            category: "CMS",
-            skills: ["WordPress", "Own built CMS"]
+            heroImage: "/skills/typescript.png",
+            skills: "TypeScript"
         },
         {
-            heroImage: "/responsive-design.png",
-            category: "Responsive Design",
-            skills: ["Desktop", "Tablet", "Mobile"]
+            heroImage: "/skills/c-.png",
+            skills: "C++"
+        },
+        {
+            heroImage: "/skills/c-sharp.png",
+            skills: "C#"
+        },
+        {
+            heroImage: "/skills/react.png",
+            skills: "React"
+        },
+        {
+            heroImage: "/skills/dotnet.png",
+            skills: "ASP.NET Core"
+        },
+        {
+            heroImage: "/skills/node-js.png",
+            skills: "Node.js"
+        },
+        {
+            heroImage: "/skills/sql-server.png",
+            skills: "SQL Server"
+        },
+        {
+            heroImage: "/skills/postgre.png",
+            skills: "PostgreSQL"
+        },
+        {
+            heroImage: "/skills/git.png",
+            skills: "Git"
+        },
+        {
+            heroImage: "/skills/azure.png",
+            skills: "Azure DevOps"
+        },
+        {
+            heroImage: "/skills/api.png",
+            skills: "RESTful APIs"
         }
     ]
 
@@ -39,9 +70,8 @@ export function Skills() {
                 <div className="skills-content">
                     {data.map((item, index) => (
                         <div className="skills-content-item" key={index}>
-                            <img src={item.heroImage} alt={item.category} />
-                            <h3>{item.category}</h3>
-                            <p>{item.skills.join(", ")}</p>
+                            <img src={item.heroImage} alt={item.skills} />
+                            <p>{item.skills}</p>
                         </div>
                     ))}
                 </div>

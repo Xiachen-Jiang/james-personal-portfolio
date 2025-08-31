@@ -15,10 +15,10 @@ export function AboutMe() {
                     <h3 className="font-600">Hi, there.</h3>
                     <h3 className="font-600">I'm <span className="highlight">James Jiang</span>.</h3>
                     <p>
-                        As a <span className="highlight font-600">Full Stack Developer</span> with years of web development experience, I possess strong knowledge in various programming languages, such as <span className="highlight">JavaScript</span>, <span className="highlight">TypeScript</span>, <span className="highlight">.NET Core</span>, <span className="highlight">SQL Server</span>, <span className="highlight">RESTful APIs</span>, and some cloud technologies. 
+                    <span className="highlight">Full Stack Web Developer</span> with hands-on experience in designing and deploying scalable, user-centric applications using <span className="highlight">React</span>, <span className="highlight">TypeScript</span>, <span className="highlight">JavaScript</span>, <span className="highlight">C# ASP.NET Core</span>, and <span className="highlight">SQL</span>. Highly skilled in <span className="highlight">RESTful API</span> development, <span className="highlight">CI/CD</span> pipelines (Azure/AWS), and building responsive, accessible front ends under <span className="highlight">Agile</span> environments. 
                     </p>
                     <p>
-                        I thrive in high-pressure, fast-paced work environments and understand the importance of teamwork and continuous learning. I am passionate about software development, with solid knowledge and experience as the software developer role.
+                    Known for being easy-going, collaborative, and a fast learner with strong <span className="highlight">analytical</span> and <span className="highlight">problem-solving</span> skills who thrives in dynamic team settings while delivering high-quality results under deadlines. I am passionate about software development, with solid knowledge and experience as the software developer role.
                     </p>
                     <div className="my-resume">
                         <button className="resume-btn" onClick={() => window.open('/Resume-Xiachen-Jiang-se.pdf', '_blank')}>
