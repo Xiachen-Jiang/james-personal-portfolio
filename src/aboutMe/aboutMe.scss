@@ -100,17 +100,17 @@
 // Dark theme - highlight colors
 body.dark-theme .about-me {
     .highlight {
-        color: #64b5f6;
+        color: #0F59A4;
     }
     
     .resume-btn {
-        background-color: #64b5f6;
+        background-color: #0F59A4;
         color: #000;
-        border-color: #64b5f6;
+        border-color: #0F59A4;
         
         &:hover {
-            background-color: #42a5f5;
-            border-color: #42a5f5;
+            background-color: #0D4C8A;
+            border-color: #0D4C8A;
         }
     }
 }
@@ -118,13 +118,13 @@ body.dark-theme .about-me {
 // Light theme - highlight colors  
 body.light-theme .about-me {
     .highlight {
-        color: #d63384;
+        color: #E34234;
     }
     
     .resume-btn {
-        background-color: #d63384;
+        background-color: #E34234;
         color: #fff;
-        border-color: #d63384;
+        border-color: #E34234;
         
         &:hover {
             background-color: #c2185b;

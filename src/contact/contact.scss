@@ -103,12 +103,12 @@
 body.dark-theme .contact {
     .contact-item {
         background-color: rgba(#333, 0.3);
-        border: 1px solid rgba(100, 181, 246, 0.2);
+        border: 1px solid rgba(15, 89, 164, 0.25);
         
         &:hover {
             background-color: rgba(#333, 0.5);
-            border-color: #64b5f6;
-            box-shadow: 0 5px 15px rgba(100, 181, 246, 0.2);
+            border-color: #0F59A4;
+            box-shadow: 0 5px 15px rgba(15, 89, 164, 0.25);
         }
         
         img {
@@ -121,11 +121,11 @@ body.dark-theme .contact {
         
         &:hover {
             img {
-                filter: brightness(0) saturate(100%) invert(58%) sepia(69%) saturate(455%) hue-rotate(180deg) brightness(103%) contrast(96%);
+                filter: brightness(0) saturate(100%) invert(18%) sepia(64%) saturate(1013%) hue-rotate(181deg) brightness(91%) contrast(92%);
             }
             
             .contact-text {
-                color: #64b5f6;
+                color: #0F59A4;
             }
         }
     }
@@ -137,7 +137,7 @@ body.dark-theme .contact {
             border-color: #444;
             
             &:focus {
-                border-color: #64b5f6;
+                border-color: #0F59A4;
             }
             
             &::placeholder {
@@ -147,11 +147,11 @@ body.dark-theme .contact {
     }
     
     .submit-btn {
-        background-color: #64b5f6;
+        background-color: #0F59A4;
         color: #000;
         
         &:hover {
-            background-color: #42a5f5;
+            background-color: #0D4C8A;
         }
     }
 }
@@ -160,12 +160,12 @@ body.dark-theme .contact {
 body.light-theme .contact {
     .contact-item {
         background-color: rgba(#f8f9fa, 0.8);
-        border: 1px solid rgba(214, 51, 132, 0.2);
+        border: 1px solid rgba(227, 66, 52, 0.2);
         
         &:hover {
             background-color: rgba(#f8f9fa, 1);
-            border-color: #d63384;
-            box-shadow: 0 5px 15px rgba(214, 51, 132, 0.2);
+            border-color: #E34234;
+            box-shadow: 0 5px 15px rgba(227, 66, 52, 0.2);
         }
         
         img {
@@ -182,7 +182,7 @@ body.light-theme .contact {
             }
             
             .contact-text {
-                color: #d63384;
+                color: #E34234;
             }
         }
     }
@@ -194,7 +194,7 @@ body.light-theme .contact {
             border-color: #e9ecef;
             
             &:focus {
-                border-color: #d63384;
+                border-color: #E34234;
             }
             
             &::placeholder {
@@ -204,7 +204,7 @@ body.light-theme .contact {
     }
     
     .submit-btn {
-        background-color: #d63384;
+        background-color: #E34234;
         color: #fff;
         
         &:hover {

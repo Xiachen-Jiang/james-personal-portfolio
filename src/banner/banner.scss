@@ -39,7 +39,7 @@ body.light-theme .banner {
 
 // Dark theme content - 使用白色到浅蓝色的渐变
 body.dark-theme .banner-content h1 {
-    background: linear-gradient(45deg, #fff, #64b5f6);
+    background: linear-gradient(45deg, #fff, #0F59A4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -47,7 +47,7 @@ body.dark-theme .banner-content h1 {
 
 // Light theme content - 使用深色到粉色的渐变
 body.light-theme .banner-content h1 {
-    background: linear-gradient(45deg, #333, #d63384);
+    background: linear-gradient(45deg, #333, #E34234);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -75,13 +75,13 @@ body.light-theme .banner-content h1 {
 
 // Cursor color 根据主题变化
 body.dark-theme .cursor {
-    color: #64b5f6;
+    color: #0F59A4;
     font-weight: bold;
     animation: blink 1s infinite;
 }
 
 body.light-theme .cursor {
-    color: #d63384;
+    color: #E34234;
     font-weight: bold;
     animation: blink 1s infinite;
 }

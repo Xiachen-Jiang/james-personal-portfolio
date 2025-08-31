@@ -28,7 +28,7 @@
             height: 120px;
             top: 10%;
             left: 5%;
-            background: radial-gradient(circle, #64b5f6, #42a5f5);
+            background: radial-gradient(circle, #0F59A4, #0D4C8A);
             animation: globalFloat1 20s infinite;
             clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
         }
@@ -51,7 +51,7 @@
             height: 150px;
             top: 30%;
             left: 80%;
-            background: conic-gradient(from 0deg, #64b5f6, #42a5f5, #2196f3, #64b5f6);
+            background: conic-gradient(from 0deg, #0F59A4, #0D4C8A, #0B4B84, #0F59A4);
             animation: globalFloat3 30s infinite;
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
         }
@@ -73,7 +73,7 @@
             height: 70px;
             top: 15%;
             right: 40%;
-            background: linear-gradient(135deg, #64b5f6, #1976d2);
+            background: linear-gradient(135deg, #0F59A4, #0D4C8A);
             animation: globalFloat5 28s infinite;
             clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
         }
@@ -95,7 +95,7 @@
             height: 50px;
             top: 45%;
             right: 8%;
-            background: radial-gradient(circle, #64b5f6, #0d47a1);
+            background: radial-gradient(circle, #0F59A4, #0D4C8A);
             animation: globalFloat7 16s infinite;
             border-radius: 50%;
         }
@@ -117,7 +117,7 @@
             height: 60px;
             top: 25%;
             left: 10%;
-            background: linear-gradient(120deg, #64b5f6, #2196f3);
+            background: linear-gradient(120deg, #0F59A4, #0B4B84);
             animation: globalFloat9 19s infinite;
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         }
@@ -139,7 +139,7 @@
             height: 95px;
             top: 40%;
             left: 70%;
-            background: conic-gradient(from 30deg, #64b5f6, #42a5f5, #2196f3);
+            background: conic-gradient(from 30deg, #0F59A4, #0D4C8A, #0B4B84);
             animation: globalFloat11 21s infinite;
             clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         }
@@ -161,7 +161,7 @@
             height: 85px;
             top: 55%;
             right: 25%;
-            background: radial-gradient(circle at 30% 30%, #64b5f6, #1976d2);
+            background: radial-gradient(circle at 30% 30%, #0F59A4, #0D4C8A);
             animation: globalFloat13 17s infinite;
             border-radius: 70% 30% 70% 30%;
         }
@@ -183,7 +183,7 @@
             height: 65px;
             top: 65%;
             left: 45%;
-            background: radial-gradient(circle, #64b5f6, #42a5f5);
+            background: radial-gradient(circle, #0F59A4, #0D4C8A);
             animation: globalFloat15 29s infinite;
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
         }
@@ -305,12 +305,12 @@
 // Theme adaptation
 body.dark-theme .animated-background .floating-shapes-global .shape {
     &.shape-1, &.shape-3, &.shape-5, &.shape-7, &.shape-9, &.shape-11, &.shape-13, &.shape-15 {
-        background: radial-gradient(circle, rgba(100, 181, 246, 0.5), rgba(66, 165, 245, 0.2));
+        background: radial-gradient(circle, rgba(15, 89, 164, 0.55), rgba(13, 76, 138, 0.22));
         filter: blur(0.5px);
     }
     
     &.shape-2, &.shape-4, &.shape-6, &.shape-8, &.shape-10, &.shape-12, &.shape-14 {
-        background: linear-gradient(45deg, rgba(100, 181, 246, 0.4), rgba(33, 150, 243, 0.2));
+        background: linear-gradient(45deg, rgba(15, 89, 164, 0.4), rgba(11, 75, 132, 0.2));
     }
 }
 
