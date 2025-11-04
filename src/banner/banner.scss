@@ -3,30 +3,38 @@
     height: calc(100vh - 70px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     transition: all 0.3s ease;
     // margin-top: 70px; // Account for fixed header
+
+    @media (max-width: 1279.98px) {
+        align-items: flex-start;
+        padding-top: 4rem;
+        justify-content: center;
+    }
 }
 
 // Dark theme banner 
 body.dark-theme .banner {
     // background: linear-gradient(135deg, #121212 0%, #1a1a2e 50%, #16213e 100%);
-    color: #fff;
+    color: #D43994;
 }
 
 // Light theme banner
-body.light-theme .banner {
+/* body.light-theme .banner {
     // background: linear-gradient(135deg, #ffeef7 0%, #ffe1f0 50%, #ffd4e9 100%);
-    color: #000;
-}
+    color: #000000;
+} */
 
 .banner-content {
-    text-align: center;
-    max-width: 800px;
+    text-align: start;
+    width: 1200px;
     padding: 0 20px;
+    margin-inline: auto;
+    // z-index: 99;
 
     h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-weight: 700;
         margin-bottom: 2rem;
         animation: fadeInUp 1s ease-out;
@@ -35,29 +43,47 @@ body.light-theme .banner {
             font-size: 2.5rem;
         }
     }
+
+    @media (max-width: 1280px) {
+        max-width:1200px;
+        text-align: center;
+        margin-inline: auto;
+    }
 }
 
 // Dark theme content - 使用白色到浅蓝色的渐变
 body.dark-theme .banner-content h1 {
-    background: linear-gradient(45deg, #fff, #0F59A4);
+    background: linear-gradient(45deg, #fff, #D43994);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 // Light theme content - 使用深色到粉色的渐变
-body.light-theme .banner-content h1 {
+/* body.light-theme .banner-content h1 {
     background: linear-gradient(45deg, #333, #E34234);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
+} */
 
 .typewriter-container {
     height: 80px; // Fixed height to prevent layout shift
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 1280px) {
+        justify-content: start;
+    }
+}
+
+.banner-content-text {
+    width: 50%;
+
+    @media (max-width: 1280px) {
+        width: 100%;
+    }
 }
 
 .typewriter-text {
@@ -75,16 +101,16 @@ body.light-theme .banner-content h1 {
 
 // Cursor color 根据主题变化
 body.dark-theme .cursor {
-    color: #0F59A4;
+    color: #D43994;
     font-weight: bold;
     animation: blink 1s infinite;
 }
 
-body.light-theme .cursor {
+/* body.light-theme .cursor {
     color: #E34234;
     font-weight: bold;
     animation: blink 1s infinite;
-}
+} */
 
 // Animations
 @keyframes blink {

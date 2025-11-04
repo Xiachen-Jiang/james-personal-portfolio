@@ -8,24 +8,24 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(24,24,24);
-  color: #fff;
+  color: #D43994;
 }
 
 .main-container {
   padding-top: 70px;
 }
 
-p {
-  margin-bottom: 1rem;
-}
+// p {
+//   margin-bottom: 1rem;
+// }
 
 body.dark-theme hr {
-  border: 1px solid #0F59A4;
+  border: 1px solid #D43994;
 }
 
-body.light-theme hr {
-  border: 1px solid #E34234;
-}
+// body.light-theme hr {
+//   border: 1px solid #E34234;
+// }
 
 hr {
   width: 5rem;

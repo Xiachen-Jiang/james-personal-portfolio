@@ -1,4 +1,3 @@
-
 import "./aboutMe.scss";
 
 export function AboutMe() {
@@ -22,7 +21,7 @@ export function AboutMe() {
                     </p>
                     <div className="my-resume">
                         <button className="resume-btn" onClick={() => window.open('/Resume-Xiachen-Jiang-se.pdf', '_blank')}>
-                            Download CV
+                            View Resume
                         </button>
                     </div>
                 </div>

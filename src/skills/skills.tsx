@@ -1,4 +1,5 @@
 import "./skills.scss";
+import Marquee from "react-fast-marquee";
 
 export function Skills() {
     const data: { heroImage: string, skills: string }[] = [
@@ -67,14 +68,20 @@ export function Skills() {
             <div className="skills-container">
                 <h2>My Skills</h2>
                 <hr />
-                <div className="skills-content">
+                <Marquee
+                    speed={80}
+                    gradient={false}
+                    pauseOnHover={false}
+                    direction="left"
+                    className="skills-marquee"
+                >
                     {data.map((item, index) => (
                         <div className="skills-content-item" key={index}>
-                            <img src={item.heroImage} alt={item.skills} />
+                            <img className="skills-content-item-img" src={item.heroImage} alt={item.skills} />
                             <p>{item.skills}</p>
                         </div>
                     ))}
-                </div>
+                </Marquee>
             </div>
         </section>
     )

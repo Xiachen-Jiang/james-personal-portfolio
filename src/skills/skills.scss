@@ -15,74 +15,84 @@
     }
 }
 
-.skills-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-    gap: 0;
-    transition: none;
+.skills-marquee {
+    margin: 2rem 0;
+}
+
+.skills-content-item {
+    position: relative;
+    text-align: center;
+    min-width: 150px;
+    width: 150px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    flex-shrink: 0;
     
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 0.5rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
     .skills-content-item {
-        position: relative;
-        text-align: center;
-        aspect-ratio: 4 / 5;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+        min-width: 120px;
+        width: 120px;
+        height: 100px;
+        margin: 0 0.5rem;
         
         img {
-            width: 70%;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 0.5rem;
+            width: 50px;
+            height: 50px;
+        }
+        
+        p {
+            font-size: 0.8rem;
         }
     }
 }
 
 // Dark theme
 body.dark-theme .skills {
-    .skills-content-item h3 {
-        color: #0F59A4;
-    }
-    
     .skills-content-item {
-        // background-color: rgba(#000,0.3);
+        background-color: rgba(255, 255, 255, 0.05);
         color: #fff;
-        border-radius: 0;
-        padding: 0.75rem;
-        box-shadow: none;
-        transition: box-shadow 0.2s ease;
-        cursor: default;
+        border-radius: 8px;
+        padding: 1rem 0.5rem;
+        border: 1px solid rgba(15, 89, 164, 0.2);
         
-        &:hover {
-            box-shadow: inset 0 0 0 1px rgba(15, 89, 164, 0.35), 0 6px 18px rgba(15, 89, 164, 0.18);
+        p {
+            color: #FFFFFF;
+            font-weight: 500;
         }
     }
 }
 
 // Light theme
-body.light-theme .skills {
-    .skills-content-item h3 {
-        color: #E34234;
-    }
-    
+/* body.light-theme .skills {
     .skills-content-item {
-        // background-color: rgba(#f8f9fa,0.3);
+        background-color: rgba(0, 0, 0, 0.02);
         color: #333;
-        border-radius: 0;
-        padding: 0.75rem;
-        box-shadow: none;
-        transition: box-shadow 0.2s ease;
-        cursor: default;
+        border-radius: 8px;
+        padding: 1rem 0.5rem;
+        border: 1px solid rgba(227, 66, 52, 0.2);
         
-        &:hover {
-            box-shadow: inset 0 0 0 1px rgba(227, 66, 52, 0.35), 0 6px 18px rgba(227, 66, 52, 0.18);
+        p {
+            color: #E34234;
+            font-weight: 500;
         }
     }
-}
+} */

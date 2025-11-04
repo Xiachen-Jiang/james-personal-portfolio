@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./banner.scss";
+import HeroExperience from "../components/HeroModels/HeroExperience";
 
 export function Banner() {
     const texts = [
@@ -32,7 +33,7 @@ export function Banner() {
             if (isDeleting) {
                 // Deleting characters
                 setCurrentText(fullText.substring(0, currentText.length - 1));
-                
+
                 if (currentText === "") {
                     setIsDeleting(false);
                     setCurrentTextIndex((prev) => (prev + 1) % texts.length);
@@ -40,7 +41,7 @@ export function Banner() {
             } else {
                 // Typing characters
                 setCurrentText(fullText.substring(0, currentText.length + 1));
-                
+
                 if (currentText === fullText) {
                     setIsWaiting(true);
                 }
@@ -57,14 +58,21 @@ export function Banner() {
     return (
         <section className="banner" id="home">
             <div className="banner-content">
-                <h1>Welcome to My Portfolio</h1>
-                <div className="typewriter-container">
-                    <p className="typewriter-text">
-                        {currentText}
-                        <span className="cursor">|</span>
-                    </p>
+                <div className="banner-content-text">
+                    <h1>Welcome to My Portfolio</h1>
+                    <div className="typewriter-container">
+                        <p className="typewriter-text">
+                            {currentText}
+                            <span className="cursor">|</span>
+                        </p>
+                    </div>
                 </div>
             </div>
+            <figure>
+                <div className="frontpage-3d-layout">
+                    <HeroExperience />
+                </div>
+            </figure>
         </section>
     )
 }

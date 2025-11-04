@@ -23,27 +23,7 @@
         .top-header-menu a.active,
         .mobile-menu a:hover,
         .mobile-menu a.active {
-            color: #0F59A4; // China Blue for dark mode
-        }
-    }
-    
-    // Light theme
-    &.light {
-        background-color: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        
-        .top-header-logo a,
-        .top-header-menu a,
-        .mobile-menu a {
-            color: #000;
-        }
-        
-        .top-header-logo a:hover,
-        .top-header-menu a:hover,
-        .top-header-menu a.active,
-        .mobile-menu a:hover,
-        .mobile-menu a.active {
-            color: #E34234; // Light mode accent
+            color: #D43994; // China Blue for dark mode
         }
     }
 }
@@ -233,7 +213,7 @@
 
 // Dark theme underline color
 .top-header.dark .top-header-menu a::after {
-    background-color: #0F59A4;
+    background-color: #D43994;
 }
 
 // Light theme underline color

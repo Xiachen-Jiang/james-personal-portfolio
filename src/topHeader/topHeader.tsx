@@ -1,122 +1,108 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./topheader.scss";
+import { Link, useLocation } from "react-router-dom";
 
 export function TopHeader() {
+    const location = useLocation();
     const [activeMenu, setActiveMenu] = useState(1); // Select Home by default
-    const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
+    // const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
 
     const topHeaderMenu: any = [
         {
             id: 1,
             name: "Home",
-            link: "#home"
+            link: "/"
         },
         {
             id: 2,
-            name: "About",
-            link: "#about"
+            name: "Portfolio",
+            link: "/portfolio"
         },
-        {
-            id: 3,
-            name: "Skills",
-            link: "#skills"
-        },
-        {
-            id: 4,
-            name: "Projects",
-            link: "#projects"
-        },
-        {
-            id: 5,
-            name: "Contact",
-            link: "#contact"
-        }
+        // {
+        //     id: 3,
+        //     name: "About Me",
+        //     link: "/about"
+        // }
     ]
 
-    // listen to theme change
+    // sync active menu with location
     useEffect(() => {
-        const checkTheme = () => {
-            const isDark = document.body.classList.contains('dark-theme');
-            setIsDarkMode(isDark);
-        };
+        const active = topHeaderMenu.find((m: any) => m.link === location.pathname)?.id || 1;
+        setActiveMenu(active);
+    }, [location.pathname]);
 
-        // initial check
-        checkTheme();
+    // listen to theme change
+    // useEffect(() => {
+    //     const checkTheme = () => {
+    //         const isDark = document.body.classList.contains('dark-theme');
+    //         setIsDarkMode(isDark);
+    //     };
 
-        // listen to body class change
-        const observer = new MutationObserver(checkTheme);
-        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    //     // initial check
+    //     checkTheme();
 
-        return () => observer.disconnect();
-    }, []);
+    //     // listen to body class change
+    //     const observer = new MutationObserver(checkTheme);
+    //     observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
-    const handleMenuClick = (id: number, link: string, event: React.MouseEvent) => {
-        event.preventDefault(); // Prevent default jump
+    //     return () => observer.disconnect();
+    // }, []);
+
+    const handleMenuClick = (id: number) => {
         setActiveMenu(id);
         setIsMobileMenuOpen(false); // Close mobile menu when item is clicked
-        
-        // Smooth scroll to target section
-        const targetElement = document.querySelector(link) as HTMLElement;
-        if (targetElement) {
-            const headerHeight = 70; // Height of fixed header
-            const targetPosition = targetElement.offsetTop - headerHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
     }
 
-    const toggleTheme = () => {
-        // use global toggleTheme function
-        if ((window as any).toggleTheme) {
-            (window as any).toggleTheme();
-        }
-    }
+    // const toggleTheme = () => {
+    //     // use global toggleTheme function
+    //     if ((window as any).toggleTheme) {
+    //         (window as any).toggleTheme();
+    //     }
+    // }
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     }
 
     return (
-        <nav className={`top-header ${isDarkMode ? 'dark' : 'light'}`}>
+        <nav className="top-header dark">
+        {/* <nav className={`top-header ${isDarkMode ? 'dark' : 'light'}`}> */}
             <div className="top-header-container">
                 <div className="top-header-logo">
-                    <a href="#home" onClick={(e) => handleMenuClick(1, "#home", e)}>James</a>
+                    <Link to="/" onClick={() => handleMenuClick(1)}>James</Link>
                 </div>
                 
                 {/* Desktop Menu */}
                 <div className="top-header-menu desktop-menu">
                     {topHeaderMenu.map((item: any) => (
-                        <a 
-                            href={item.link} 
+                        <Link 
+                            to={item.link}
                             key={item.id}
                             className={activeMenu === item.id ? 'active' : ''}
-                            onClick={(e) => handleMenuClick(item.id, item.link, e)}
+                            onClick={() => handleMenuClick(item.id)}
                         >
                             {item.name}
-                        </a>
+                        </Link>
                     ))}
-                    <div className="theme-switch" onClick={toggleTheme}>
+                    {/* <div className="theme-switch" onClick={toggleTheme}>
                         <div className={`switch-container ${isDarkMode ? 'dark' : 'light'}`}>
                             <div className="switch-icon">
                                 {isDarkMode ? '🌙' : '☀️'}
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Mobile Menu Controls */}
                 <div className="mobile-controls">
-                    <div className="theme-switch mobile-theme-switch" onClick={toggleTheme}>
+                    {/* <div className="theme-switch mobile-theme-switch" onClick={toggleTheme}>
                         <div className={`switch-container ${isDarkMode ? 'dark' : 'light'}`}>
                             <div className="switch-icon">
                                 {isDarkMode ? '🌙' : '☀️'}
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className={`hamburger-menu ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
                         <span></span>
                         <span></span>
@@ -127,14 +113,14 @@ export function TopHeader() {
                 {/* Mobile Menu */}
                 <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
                     {topHeaderMenu.map((item: any) => (
-                        <a 
-                            href={item.link} 
+                        <Link 
+                            to={item.link}
                             key={item.id}
                             className={activeMenu === item.id ? 'active' : ''}
-                            onClick={(e) => handleMenuClick(item.id, item.link, e)}
+                            onClick={() => handleMenuClick(item.id)}
                         >
                             {item.name}
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>

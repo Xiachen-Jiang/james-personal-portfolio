@@ -100,17 +100,17 @@
 // Dark theme - highlight colors
 body.dark-theme .about-me {
     .highlight {
-        color: #0F59A4;
+        color: #D43994;
     }
     
     .resume-btn {
-        background-color: #0F59A4;
-        color: #000;
-        border-color: #0F59A4;
+        background-color: #D43994;
+        color: #fff;
+        border-color: #D43994;
         
         &:hover {
-            background-color: #0D4C8A;
-            border-color: #0D4C8A;
+            background-color: darken(#D43994, 10%);
+            border-color: darken(#D43994, 10%);
         }
     }
 }
@@ -123,7 +123,7 @@ body.light-theme .about-me {
     
     .resume-btn {
         background-color: #E34234;
-        color: #fff;
+        color: #d9ceff;
         border-color: #E34234;
         
         &:hover {

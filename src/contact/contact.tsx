@@ -3,16 +3,16 @@ import "./contact.scss";
 export function Contact() {
 
     const data: { heroImage: string, value: string, link: string }[] = [
-        {
-            heroImage: "/email.png",
-            value: "jiangxiachen01@outlook.com",
-            link: "mailto:jiangxiachen01@outlook.com"
-        },
-        {
-            heroImage: "/telephone.png",
-            value: "+61 404 318 145",
-            link: "tel:+61404318145"
-        },
+        // {
+        //     heroImage: "/email.png",
+        //     value: "jiangxiachen01@outlook.com",
+        //     link: "mailto:jiangxiachen01@outlook.com"
+        // },
+        // {
+        //     heroImage: "/telephone.png",
+        //     value: "+61 404 318 145",
+        //     link: "tel:+61404318145"
+        // },
         {
             heroImage: "/linkedin.png",
             value: "linkedin.com/in/xiachen-jiang/",
