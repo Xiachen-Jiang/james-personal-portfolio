@@ -2,7 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { useMediaQuery } from 'react-responsive';
 import { memo } from 'react';
-import { Room } from './Room.jsx';
+import { Room } from './Room';
 import HeroLights from './HeroLights';
 
 const HeroExperience = memo(() => {

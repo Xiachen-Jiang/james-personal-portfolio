@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react';
 import * as THREE from 'three';
 
 const HeroLights = () => {
     return (
-        <Fragment>
+        <>
             <spotLight
                 position={[2, 5, 6]}
                 angle={0.15}
@@ -41,7 +40,7 @@ const HeroLights = () => {
                 intensity={10}
                 color="#0d00a4"
             />
-        </Fragment>
+        </>
     )
 }
 

@@ -15,6 +15,17 @@ export function Banner() {
     const [isDeleting, setIsDeleting] = useState(false);
     const [isWaiting, setIsWaiting] = useState(false);
 
+    // 平滑滚动到About Me section
+    const scrollToAbout = () => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    };
+
     useEffect(() => {
         let timeout: any;
 
@@ -65,6 +76,15 @@ export function Banner() {
                             {currentText}
                             <span className="cursor">|</span>
                         </p>
+                    </div>
+                    <div className="banner-button-container">
+                        <button 
+                            className="learn-more-btn"
+                            onClick={scrollToAbout}
+                        >
+                            About Me
+                            <span className="btn-arrow">↓</span>
+                        </button>
                     </div>
                 </div>
             </div>

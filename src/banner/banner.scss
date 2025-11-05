@@ -86,6 +86,56 @@ body.dark-theme .banner-content h1 {
     }
 }
 
+.banner-button-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1280px) {
+        justify-content: flex-start;
+    }
+}
+
+.learn-more-btn {
+    background: linear-gradient(135deg, #D43994, #ff6b9d);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 57, 148, 0.3);
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(212, 57, 148, 0.4);
+        background: linear-gradient(135deg, #ff6b9d, #D43994);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+    
+    .btn-arrow {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover .btn-arrow {
+        transform: translateY(2px);
+    }
+    
+    @media (max-width: 768px) {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
 .typewriter-text {
     font-size: 1.8rem;
     font-weight: 500;

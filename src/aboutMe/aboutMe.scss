@@ -78,19 +78,34 @@
             margin-top: 2rem;
             
             .resume-btn {
-                display: inline-block;
-                padding: 0.8rem 1.5rem;
-                border-radius: 30px;
-                text-decoration: none;
+                background: linear-gradient(135deg, #D43994, #ff6b9d);
+                color: white;
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 50px;
+                font-size: 1.1rem;
                 font-weight: 600;
-                font-size: 1rem;
-                transition: all 0.3s ease;
-                border: 2px solid transparent;
                 cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(212, 57, 148, 0.3);
+                text-decoration: none;
                 
                 &:hover {
                     transform: translateY(-2px);
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    box-shadow: 0 8px 25px rgba(212, 57, 148, 0.4);
+                    background: linear-gradient(135deg, #ff6b9d, #D43994);
+                }
+                
+                &:active {
+                    transform: translateY(0);
+                }
+                
+                @media (max-width: 768px) {
+                    padding: 0.8rem 1.5rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -102,34 +117,12 @@ body.dark-theme .about-me {
     .highlight {
         color: #D43994;
     }
-    
-    .resume-btn {
-        background-color: #D43994;
-        color: #fff;
-        border-color: #D43994;
-        
-        &:hover {
-            background-color: darken(#D43994, 10%);
-            border-color: darken(#D43994, 10%);
-        }
-    }
 }
 
 // Light theme - highlight colors  
 body.light-theme .about-me {
     .highlight {
         color: #E34234;
-    }
-    
-    .resume-btn {
-        background-color: #E34234;
-        color: #d9ceff;
-        border-color: #E34234;
-        
-        &:hover {
-            background-color: #c2185b;
-            border-color: #c2185b;
-        }
     }
 }
 
