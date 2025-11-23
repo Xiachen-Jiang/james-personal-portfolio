@@ -1,7 +1,7 @@
 import './App.scss';
 import { TopHeader } from './topHeader/topHeader';
 import { AnimatedBackground } from './components/AnimatedBackground';
-import { ThemeManager } from './components/ThemeManager';
+// import { ThemeManager } from './components/ThemeManager';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Portfolio } from './pages/Portfolio';
@@ -10,7 +10,8 @@ import { Portfolio } from './pages/Portfolio';
 function App() {
 
   return (
-    <ThemeManager>
+    // <ThemeManager>
+    <>
       <AnimatedBackground />
       <TopHeader />
       <Routes>
@@ -21,7 +22,8 @@ function App() {
       </Routes>
       {/* Portal container for popups */}
       <div id="portal-root"></div>
-    </ThemeManager>
+    {/* // </ThemeManager> */}
+    </>
   )
 }
 
