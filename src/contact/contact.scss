@@ -19,6 +19,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: #fff;
         }
     }
 }
@@ -100,7 +101,7 @@
 }
 
 // Dark theme
-body.dark-theme .contact {
+.contact {
     .contact-item {
         background-color: rgba(#333, 0.3);
         border: 1px solid rgba(15, 89, 164, 0.25);
@@ -155,60 +156,3 @@ body.dark-theme .contact {
         }
     }
 }
-
-// Light theme
-body.light-theme .contact {
-    .contact-item {
-        background-color: rgba(#f8f9fa, 0.8);
-        border: 1px solid rgba(227, 66, 52, 0.2);
-        
-        &:hover {
-            background-color: rgba(#f8f9fa, 1);
-            border-color: #E34234;
-            box-shadow: 0 5px 15px rgba(227, 66, 52, 0.2);
-        }
-        
-        img {
-            filter: brightness(0) saturate(100%) invert(20%) sepia(8%) saturate(6%) hue-rotate(40deg) brightness(96%) contrast(93%);
-        }
-        
-        .contact-text {
-            color: #333;
-        }
-        
-        &:hover {
-            img {
-                filter: brightness(0) saturate(100%) invert(14%) sepia(89%) saturate(2466%) hue-rotate(315deg) brightness(91%) contrast(89%);
-            }
-            
-            .contact-text {
-                color: #E34234;
-            }
-        }
-    }
-    
-    .form-group {
-        input, textarea {
-            background-color: #fff;
-            color: #333;
-            border-color: #e9ecef;
-            
-            &:focus {
-                border-color: #E34234;
-            }
-            
-            &::placeholder {
-                color: #666;
-            }
-        }
-    }
-    
-    .submit-btn {
-        background-color: #E34234;
-        color: #fff;
-        
-        &:hover {
-            background-color: #c2185b;
-        }
-    }
-} 

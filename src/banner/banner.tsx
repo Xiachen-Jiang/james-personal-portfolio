@@ -5,7 +5,7 @@ import HeroExperience from "../components/HeroModels/HeroExperience";
 export function Banner() {
     const texts = [
         "I'm James Jiang.",
-        "I'm a software engineer.",
+        "I'm a software developer.",
         "I'm a full stack developer.",
         "I have passion, willingness and skills."
     ];

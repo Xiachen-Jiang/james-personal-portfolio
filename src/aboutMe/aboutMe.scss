@@ -43,6 +43,7 @@
 
     .about-me-content-right {
         width: 60%;
+        color: #fff;
 
         @media (max-width: 992px) {
             width: 100%;
@@ -113,16 +114,16 @@
 }
 
 // Dark theme - highlight colors
-body.dark-theme .about-me {
+.about-me {
     .highlight {
         color: #D43994;
     }
 }
 
 // Light theme - highlight colors  
-body.light-theme .about-me {
-    .highlight {
-        color: #E34234;
-    }
-}
+// body.light-theme .about-me {
+//     .highlight {
+//         color: #E34234;
+//     }
+// }
 
