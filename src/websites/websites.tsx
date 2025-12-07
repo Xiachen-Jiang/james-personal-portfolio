@@ -38,6 +38,10 @@ export function Websites() {
         {
             imageUrl: "/logo/logo-nelson.png",
             link: "https://nelsonteamwear.com.au/"
+        },
+        {
+            imageUrl: "/logo/logo-aiml.png",
+            link: "https://aiml.shop/"
         }
     ]
 
