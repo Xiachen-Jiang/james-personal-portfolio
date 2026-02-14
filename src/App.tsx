@@ -1,6 +1,6 @@
 import './App.scss';
 import { TopHeader } from './topHeader/topHeader';
-import { AnimatedBackground } from './components/AnimatedBackground';
+// import { AnimatedBackground } from './components/AnimatedBackground';
 // import { ThemeManager } from './components/ThemeManager';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Home } from './pages/Home';
@@ -12,7 +12,7 @@ function App() {
   return (
     // <ThemeManager>
     <>
-      <AnimatedBackground />
+      {/* <AnimatedBackground /> */}
       <TopHeader />
       <Routes>
         <Route path="/" element={<Home />} />
